@@ -1,64 +1,65 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
 <head>
   <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
 </head>
-<header class="header">
-  <div class="description">
-    <h1 class="text-uppercase font-weight-bold">Welcome!</h1>
-    <p>This the portfolio site from Luis, Lin, and Ixchel. We are glad that you found this page. Scroll down to find out
-      more about us.</p>
-    <a href="#about"><button class="btn btn-outline-secondary btn-lg">Learn More</button></a>
-  </div>
-</header>
-<div class="about-cards" id="about">
-  <h1 class="text-uppercase font-weight-bold">{% block title %}About{% endblock %}</h1>
-  <div class="container">
-    <div class="row">
-      <div class="card col-lg-6 col-md-6 col-sm-12">
-          <div class="card-body">
-            <img class="card-img-top" src="../static/img/lin.JPG" alt="Card image">
+<div class="body">
+  <header class="header">
+    <div class="description">
+      <h1 class="text-uppercase">Welcome!</h1>
+      <h2>My name is Lin and this is my portfolio site.</h2>
+      <a href="#about"><button class="btn btn-outline-secondary btn-lg">Learn More</button></a>
+    </div>
+  </header>
+  <hr class="section-divider">
+  <div class="about-cards" id="about">
+    <h1 class="text-uppercase">{% block title %}About{% endblock %}</h1>
+    <div class="container">
+      <div class="row">
+        <div class="card col-lg-6 col-md-6 col-sm-12">
+            <div class="card-body">
+              <img class="card-img" src="../static/img/lin.JPG" alt="Portfolio Image">
+            </div>
+        </div>
+        <div class="card col-lg-6 col-md-6 col-sm-12">
+          <div class="card-body" id="bio">
+            <h2 class="card-title">Lin Jing Liu</h2>
+            <h3 class="card-subtitle mb-2">Class of 2025, Cornell University</h3>
+            <h5 class="card-text">
+              I am a rising sophomore at Cornell University, majoring in Computer Science. I am
+              passionate about software engineering and hopes to learn more about the industry through both academic and
+              professional opportunities. Look around this website to know more about me and this team!
+            </h5>
           </div>
-      </div>
-      <div class="card col-lg-6 col-md-6 col-sm-12">
-        <div class="card-body">
-          <h4 class="card-title">Lin Jing Liu</h4>
-          <h5 class="card-subtitle mb-2">Class of 2025, Cornell University</h5>
-          <p class="card-text">
-            I am a rising sophomore at Cornell University, majoring in Computer Science. I am
-            passionate about software engineering and hopes to learn more about the industry through both academic and
-            professional opportunities. Look around this website to know more about me and this team!
-          </p>
         </div>
       </div>
     </div>
   </div>
-</div>
-<hr class="divider" />
-<div>
-  <h4>Connect with Me!</h4>
-  <div class="container">
-    <div class="row">
-      <div class="card col-lg-3 col-md-3 col-sm-6">
-        <div class="card-body">
-          LinkedIn
+  <hr class="divider" />
+  <div>
+    <h4>Connect with Me!</h4>
+    <div class="container">
+      <div class="row">
+        <div class="card col-lg-3 col-md-3 col-sm-6">
+          <div class="card-body">
+            LinkedIn
+          </div>
         </div>
-      </div>
-      <div class="card col-lg-3 col-md-3 col-sm-6">
-        <div class="card-body">
-          GitHub
+        <div class="card col-lg-3 col-md-3 col-sm-6">
+          <div class="card-body">
+            GitHub
+          </div>
         </div>
-      </div>
-      <div class="card col-lg-3 col-md-3 col-sm-6">
-        <div class="card-body">
-          Email
+        <div class="card col-lg-3 col-md-3 col-sm-6">
+          <div class="card-body">
+            Email
+          </div>
         </div>
-      </div>
-      <div class="card col-lg-3 col-md-3 col-sm-6">
-        <div class="card-body">
-          Instagram
+        <div class="card col-lg-3 col-md-3 col-sm-6">
+          <div class="card-body">
+            Instagram
+          </div>
         </div>
       </div>
     </div>
