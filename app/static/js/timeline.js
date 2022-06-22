@@ -38,6 +38,8 @@ async function renderPosts() {
 renderPosts();
 
 function formSubmit() {
+    event.preventDefault();
+
     let url = '/api/timeline_post';
     var request = new XMLHttpRequest();
     request.open('POST', url, true);
@@ -50,6 +52,6 @@ function formSubmit() {
     };
  
     request.send(new FormData(event.target));
-    event.preventDefault();
     renderPosts();
 }
+document.getElementById('postForm').addEventListener('submit', formSubmit);
