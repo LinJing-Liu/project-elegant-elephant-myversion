@@ -38,7 +38,7 @@ async function renderPosts() {
 renderPosts();
 
 function formSubmit() {
-    event.preventDefault();
+    // event.preventDefault();
 
     let url = '/api/timeline_post';
     var request = new XMLHttpRequest();
