@@ -93,12 +93,12 @@ hr.divider {
 .carousel img {
     object-fit: cover;
 }
-.prof .hero {
+.prof .hero, .timeline .hero {
     padding: 200px 50px;
     background: #135E46;
     color: white;
 }
-.prof h1 {
+.prof h1, .timeline .hero {
     text-transform: uppercase;
     color: #E3C6AD;
     text-align: center;
@@ -248,4 +248,22 @@ hr.divider {
 }
 .hobbies .hobbies-profile .card img {
     max-width: 100%;
+}
+.timeline .hero {
+    padding-bottom: 200px;
+}
+.timeline .hero h4 {
+    text-align: center;
+    font-weight: 300;
+    color: white;
+    text-transform: none;
+}
+.timeline form {
+    margin: 50px;
+}
+.timeline .posts {
+    margin: 50px;
+}
+.timeline img {
+    max-width: 200px;
 }

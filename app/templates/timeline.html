@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="timeline">
+  <div class="hero">
+    <h1 class="text-uppercase font-weight-bold">{% block title %}Timeline{% endblock %}</h1>
+    <h4>Use this page to submit a timeline post!</h4>
+  </div>
+  <form id="postForm" action="" onsubmit="formSubmit(); return false;">
+    <h1>Timeline Post Form</h1>
+    <div class="form-group">
+      <label>Name</label>
+      <input name="name" placeholder="Enter Name">
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input name="email" placeholder="Enter Email">
+    </div>
+    <div class="form-group">
+      <label>Post Content</label>
+      <input name="content" placeholder="Enter Post Content">
+    </div>
+    <button class="btn btn-primary">Submit</button>
+  </form>
+  <div class="posts"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+<script type="module" src="../static/js/timeline.js"></script>
+{% endblock %}
