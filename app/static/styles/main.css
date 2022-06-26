@@ -37,14 +37,8 @@ body {
 .section-divider {
     border: 5px solid #BB86FC;
 }
-.about-cards {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-left: 5%;
-    margin-right: 5%;
-}
 .about-cards h1 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
     color: #BB86FC;
     font-size: 4em;
@@ -83,13 +77,11 @@ body {
     text-align: center;
 }
 hr.divider {
-    border: 5px solid #478966;
+    border: 5px solid #3700B3;
     border-radius: 5%;
-    margin: 70px;
     max-width: 40%;
     margin-left: 30%;
     margin-right: auto;
-    border-style: outset;
 }
 .carousel {
     margin-left: 15%;
@@ -157,13 +149,11 @@ hr.divider {
     background: #B67B65;
 }
 .info-container {
-    /* border: 1px solid black; */
     border-radius: 5%;
     margin: 0px 100px;
     margin-bottom: 100px;
 }
 .prof .list-group a {
-    /* background-color: #D09D7B; */
     color: #B67B65;
     padding: 20px;
     border: 2px #B67B65 solid;
@@ -173,9 +163,9 @@ hr.divider {
     color: #135E46
 }
 .footer {
-    margin-top: 50px;
+    padding-top: 50px;
     padding: 60px 100px;
-    background-color: black;
+    background-color: #1F1F1F;
     color: white;
 }
 .footer h6 {
