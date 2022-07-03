@@ -1,10 +1,11 @@
 import os
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Response
 from dotenv import load_dotenv
 from peewee import *
 import datetime
 from playhouse.shortcuts import *
 from pymysql import *
+import re
 
 load_dotenv()
 app = Flask(__name__)
@@ -34,6 +35,10 @@ class TimelinePost(Model):
 mydb.connect()
 mydb.create_tables([TimelinePost])
 
+def checkEmail(email):
+    regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+    return re.fullmatch(regex, email)
+
 @app.route('/')
 def index():
     return render_template('index.html', title="Home", url=os.getenv("URL"))
@@ -52,6 +57,33 @@ def timeline():
 
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
+    try:
+        invalidName = Response("Invalid name")
+        invalidName.status_code = 400
+        name = request.form['name']
+        if name == "":
+            return invalidName
+    except KeyError:
+        return invalidName
+
+    try:
+        invalidContent = Response("Invalid content")
+        invalidContent.status_code = 400
+        content = request.form['content']
+        if content == "":
+            return invalidContent
+    except KeyError:
+        return invalidContent
+
+    try:
+        invalidEmail = Response("Invalid email")
+        invalidEmail.status_code = 400
+        email = request.form['email']
+        if email == "" or (not checkEmail(email)):
+            return invalidEmail
+    except KeyError:
+        return invalidEmail
+
     name = request.form['name']
     email = request.form['email']
     content = request.form['content']
