@@ -67,3 +67,11 @@
 .connect-section #connect-title{
     text-align: center;
 }
+.connect-section img {
+    max-width: 60px;
+    margin-left: 50%;
+}
+.connect-section #github {
+    background-color: white;
+    padding: 5px;
+}
