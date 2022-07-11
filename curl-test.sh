@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# curl tests for the mysql database
 echo "Input the content for a random timeline post: "
 read INPUT
 CONTENTS=( "$INPUT" )
