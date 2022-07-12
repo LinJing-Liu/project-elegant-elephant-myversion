@@ -42,7 +42,10 @@ function formSubmit() {
     var request = new XMLHttpRequest();
     request.open('POST', url, true);
     request.onload = function() {
-       console.log(request.responseText);
+        console.log(request.responseText);
+        if(request.status == 503) {
+            alert("You have attempted to submit too many timeline requests at a time. Please try again later.");
+        }
     };
  
     request.onerror = function() {

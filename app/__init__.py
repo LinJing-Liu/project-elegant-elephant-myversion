@@ -102,7 +102,7 @@ def get_time_line_post():
     }
 
 @app.route('/api/timeline_post', methods=['DELETE'])
-def delete_time_line_post():
+def delete_time_line_posts():
     id = request.form['id']
     mycursor = mydb.cursor()
     mycursor.execute("DELETE FROM Timelinepost WHERE id = " + id)
@@ -113,7 +113,3 @@ def delete_time_line_post():
 @app.errorhandler(404)
 def page_not_found_error(error):
     return render_template('not_found.html', title="404 Error", url=os.getenv("URL")), 404
-
-@app.errorhandler(503)
-def service_unavailable_error(error):
-    return render_template('service_unavailable.html', title="503 Error", url=os.getenv("URL")), 503
