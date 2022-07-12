@@ -56,10 +56,6 @@ def portfolio():
 def timeline():
     return render_template('timeline.html', title="Timeline", url=os.getenv("URL"))
 
-@app.route('/error')
-def error():
-    return render_template('error.html', title="Error", url=os.getenv("URL"))
-
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
     try:
@@ -113,3 +109,11 @@ def delete_time_line_post():
     mydb.commit()
     output = str(mycursor.rowcount) + ", records(s) deleted \n"
     return output
+
+@app.errorhandler(404)
+def page_not_found_error(error):
+    return render_template('not_found.html', title="404 Error", url=os.getenv("URL")), 404
+
+@app.errorhandler(503)
+def service_unavailable_error(error):
+    return render_template('service_unavailable.html', title="503 Error", url=os.getenv("URL")), 503
