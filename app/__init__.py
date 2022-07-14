@@ -11,10 +11,11 @@ load_dotenv()
 app = Flask(__name__)
 
 if os.getenv("TESTING") == "true":
-	print("Runnign in test mode")
+	print("Running in test mode")
 	mydb = SqliteDatabase('file:memory?mode=memory&cache=shared', uri=True)
 else:
-	mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
+    print("Running in standard mode")
+    mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
     		user=os.getenv("MYSQL_USER"),
     		password=os.getenv("MYSQL_PASSWORD"),
     		host=os.getenv("MYSQL_HOST"),
@@ -101,10 +102,14 @@ def get_time_line_post():
     }
 
 @app.route('/api/timeline_post', methods=['DELETE'])
-def delete_time_line_post():
+def delete_time_line_posts():
     id = request.form['id']
     mycursor = mydb.cursor()
     mycursor.execute("DELETE FROM Timelinepost WHERE id = " + id)
     mydb.commit()
     output = str(mycursor.rowcount) + ", records(s) deleted \n"
     return output
+
+@app.errorhandler(404)
+def page_not_found_error(error):
+    return render_template('not_found.html', title="404 Error", url=os.getenv("URL")), 404

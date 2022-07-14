@@ -1,10 +1,10 @@
 # test_db.py
 
-from app import app
 import unittest
 import os
-os.environ['TESTING'] = 'True'
+os.environ['TESTING'] = 'true'
 
+from app import app
 
 class AppTestCase(unittest.TestCase):
     def setUp(self):
