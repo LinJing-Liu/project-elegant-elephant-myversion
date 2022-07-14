@@ -1,0 +1,33 @@
+.hobbies {
+    margin-bottom: 120px;
+    background-color: black;
+}
+.hobbies .header {
+    padding: 200px 50px;
+    color: white;
+    text-align: center;
+}
+.hobbies .title {
+    font-size: 5em;
+    color: #BB86FC;
+    font-weight: 300;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+.hobbies .subtitle {
+    margin-top: 20px;
+    margin-left: 15%;
+    max-width: 70%;
+}
+.hobbies .curve {
+    max-width: 80%;
+    max-height: 10%;
+}
+.time-line {
+    width: 30%;
+}
+.container {
+    background-color: black;
+    margin-bottom: 0;
+    color: white;
+}

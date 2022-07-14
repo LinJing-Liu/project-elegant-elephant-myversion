@@ -9,6 +9,7 @@ body {
 }
 .header {
     padding-top: 50px;
+    max-height: 700px;
 }
 .header .title {
     text-align: center;
@@ -106,64 +107,6 @@ hr.divider {
 }
 .footer #copyright-description {
     padding: 20px 0px;
-}
-.hobbies {
-   margin-bottom: 120px;
-}
-.hobbies .hero {
-    padding: 200px 50px;
-    background: #135E46;
-    color: white;
-    text-align: center;
-}
-.hobbies #page-title {
-    color: #E3C6AD;
-    text-transform: uppercase;
-    padding-bottom: 15px;
-}
-.hobbies .hero h5 {
-    max-width: 60%;
-    margin-left: 20%;
-    font-weight: 300;
-}
-.hobbies .hobbies-profile {
-    margin: 80px 80px;
-    background: #fce9d9;
-    padding: 50px;
-}
-.hobbies .hobbies-profile h2 {
-    text-transform: uppercase;
-    color: #135E46;
-    display: inline;
-    padding-left: 10px;
-    padding-right: 30px;
-    font-size: 2.5em;
-}
-.hobbies .hobbies-profile hr {
-    border: 2px #135E46 solid;
-    border-radius: 5%;
-    margin-bottom: 30px;
-}
-.hobbies .hobbies-profile button {
-    background: #478966;
-    padding: 10px;
-    border-radius: 5%;
-    border: none;
-    margin-right: 10px;
-    transform: translateY(-5px);
-}
-.hobbies .hobbies-profile button:hover {
-    background: #135E46;
-}
-.hobbies .hobbies-profile .card {
-    border: 3px #135E46 solid;
-    border-radius: 5%;
-}
-.hobbies .hobbies-profile .card:hover{
-    color:#B67B65;
-}
-.hobbies .hobbies-profile .card img {
-    max-width: 100%;
 }
 .timeline .hero {
     padding-bottom: 200px;
