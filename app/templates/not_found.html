@@ -1,10 +1,35 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="header">
-    <div class="description">
-        <h1>{% block title %}Error 404: Not Found{% endblock %}</h1>
-        <p>Sorry, I have no idea which page you are trying to find. Are you sure you type in the correct URL?</p>
+<style>
+    .error-page {
+        background-color: black;
+        color: white;
+    }
+    .error-page .header {
+        padding-top: 200px;
+        max-width: 80%;
+        margin-left: 10%;
+    }
+    .error-page .title {
+        text-transform: uppercase;
+    }
+    .error-page hr {
+        margin: 0;
+        border-color: #03ADC6;
+    }
+</style>
+<div class="error-page">
+    <div class="header">
+        <div class="description">
+            <h1 class="title">{% block title %}Error 404: Not Found{% endblock %}</h1>
+            <h2 class="subtitle">
+                Sorry, I have no idea which page you are trying to find. 
+                <br />
+                Are you sure you type in the correct URL?
+            </h2>
+        </div>
     </div>
+    <hr class="section-divider" />
 </div>
 {% endblock %}
