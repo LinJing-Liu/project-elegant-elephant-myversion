@@ -1,28 +1,39 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/timeline.css') }}">
+</head>
 <div class="timeline">
-  <div class="hero">
-    <h1 class="text-uppercase font-weight-bold">{% block title %}Timeline{% endblock %}</h1>
-    <h4>Use this page to submit a timeline post!</h4>
+  <div class="header">
+    <h1 class="title">{% block title %}Timeline{% endblock %}</h1>
+    <h3 class="subtitle">
+      Use this page to submit a timeline post!
+    </h3>
   </div>
+  <hr class="section-divider">
   <form id="postForm" action="" onsubmit="formSubmit(); return false;">
-    <h1>Timeline Post Form</h1>
-    <div class="form-group">
-      <label>Name</label>
-      <input name="name" placeholder="Enter Name">
+    <h1 class="title">Timeline Post Form</h1>
+    <div id="form-fields">
+      <div class="form-group">
+        <label>Name</label>
+        <input name="name">
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input name="email">
+      </div>
+      <div class="form-group">
+        <label>Post Content</label>
+        <input name="content">
+      </div>
+      <button class="btn btn-primary">Submit</button>
     </div>
-    <div class="form-group">
-      <label>Email</label>
-      <input name="email" placeholder="Enter Email">
-    </div>
-    <div class="form-group">
-      <label>Post Content</label>
-      <input name="content" placeholder="Enter Post Content">
-    </div>
-    <button class="btn btn-primary">Submit</button>
   </form>
-  <div class="posts"></div>
+  <div class="post-container">
+    <h1 class="title">Timeline Posts</h1>
+    <div class="posts"></div>
+  </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>

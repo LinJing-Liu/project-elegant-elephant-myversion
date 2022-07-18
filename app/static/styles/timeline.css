@@ -1,0 +1,89 @@
+.timeline {
+    background-color: black;
+    color: white;
+}
+.timeline .header {
+    padding: 200px 50px;
+    text-align: center;
+}
+.timeline .title {
+    font-size: 5em;
+    text-transform: uppercase;
+    color: #BB86FC;
+    font-weight: 300;
+    margin-top: 50px;
+}
+.timeline .section-divider {
+    border-color:#03ADC6;
+}
+.timeline .hero {
+    padding-bottom: 200px;
+}
+.timeline .hero h4 {
+    text-align: center;
+    font-weight: 300;
+    color: white;
+    text-transform: none;
+}
+.timeline form {
+    margin: 0 100px;
+    padding: 100px 0;
+}
+.timeline form .title, .post-container .title {
+    font-size: 3em;
+    text-transform: none;
+    margin-top: 0;
+}
+.timeline #form-fields {
+    border: 2px solid #03ADC6;
+    padding: 30px 80px;
+    background-color: #1f1f1fd8;
+    font-size: large;
+}
+.timeline input {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 10px;
+}
+.timeline input:focus, input:hover {
+    border: none;
+    outline: 1px solid #03acc6a2;
+}
+.timeline button {
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid #03ADC6;
+    padding: 10px 20px;
+}
+.timeline button:hover {
+    background-color: #03ADC6;
+    border: 1px solid #03ADC6;
+}
+.timeline .post-container {
+    padding: 0 100px;
+    padding-bottom: 150px;
+}
+.timeline .posts {
+    padding-left: 30px;
+}
+.timeline .single-post {
+    padding-top: 15px;
+}
+.timeline .posts .name {
+    color: #03DAC6;
+}
+.timeline .posts a {
+    font-style: italic;
+    color: #37ffeb;
+}
+.timeline img {
+    max-width: 250px;
+    display: block;
+    margin: auto;
+}
+.timeline .post-divider {
+    border: 2px dashed #03ADC6;
+}

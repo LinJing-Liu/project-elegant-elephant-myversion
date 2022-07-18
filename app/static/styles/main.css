@@ -108,21 +108,3 @@ hr.divider {
 .footer #copyright-description {
     padding: 20px 0px;
 }
-.timeline .hero {
-    padding-bottom: 200px;
-}
-.timeline .hero h4 {
-    text-align: center;
-    font-weight: 300;
-    color: white;
-    text-transform: none;
-}
-.timeline form {
-    margin: 50px;
-}
-.timeline .posts {
-    margin: 50px;
-}
-.timeline img {
-    max-width: 200px;
-}
