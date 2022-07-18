@@ -7,16 +7,6 @@ body {
 .body {
     background-color: black;
 }
-.fixed-top {
-    background-color: black!important;
-    border-bottom: 3px solid #03ADC6;
-}
-.fixed-top .nav-item {
-    padding-left: 15px;
-}
-.navbar-light .navbar-toggler:focus{
-    outline: 1px solid white;
-}
 .header {
     padding-top: 50px;
     max-height: 700px;
@@ -50,7 +40,7 @@ body {
     border: 5px solid #BB86FC;
 }
 .section-divider {
-    border: 2px solid #BB86FC;
+    border: 3px solid #BB86FC;
 }
 .about-cards h1 {
     text-align: left;
