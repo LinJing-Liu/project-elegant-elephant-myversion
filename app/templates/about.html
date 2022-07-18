@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/about.css') }}">
+</head>
+<div class="about">
+    <div class="header">
+        <div class="title">{% block title %}About this Site{% endblock %}</div>
+        <hr class="section-divider" />
+    </div>
+    <div class="statement jumbotron">
+        <h1 class="title">Statement</h1>
+        <div>
+            Thank you for taking the time to visit my portfolio site! 
+            This statement serves as a quick clarification about the contents on this site and how they have evolved. 
+            This site originates as part of the Portfolio Hackathon organized by MLH for its Fellowship Program in summer 2022, for track Production Engineering. 
+            I collaborated with fellow team members Luis Fernando Carnage’s and Marcela Ixchel Gomez Wuotto. See this <a href="https://github.com/MLH-Fellowship/project-elegant-elephant">GitHub link</a> 
+            and <a href="https://devpost.com/software/portfolio-elegant-elephant">Devpost link</a> for more information about how the site is like when it was first created as part of the hackathon.
+        </div>
+        <div>
+            Then during the fellowship, I decided to redesign this portfolio site and improve it, 
+            beyond what I originally contributed to during the hackathon. This site is designed entirely by me using Figma. 
+            I am not very experienced in UI/UX design, so I definitely tried to make the site as appealing as possible. 
+            Then I used flask, bootstrap, html and css to improve the site to what it looks like right now. 
+        </div>
+        <div>
+            As part of the fellowship, I also get to improve the site by experimenting and using tools like VPS server 
+            (through DigitalOcean), tmux sessions, python unittest, mysql database, docker containers and many other tools. 
+            I definitely want to give an acknowledgement to the <a href="https://fellowship.mlh.io/">MLH Fellowship</a> for providing me with a curriculum to improve 
+            this site and other resources like mentors, pod leaders, and workshops. These resources all support me in building 
+            and improving this site.
+        </div>
+        <div>
+            For more information about how the site has evolved, please visit the <a href="https://github.com/LinJing-Liu/project-elegant-elephant-myversion">GitHub link</a> for this website. 
+            Also see below for resources I used to create this site!
+        </div>
+    </div>
+    <div class="resources jumbotron">
+        <h1 class="title">Resources</h1>
+        <div class="links list-group">
+            <a href="https://material.io/design/color/dark-theme.html" class="list-group-item list-group-item-action">Color Theme for the Site</a>
+            <div>Photos for the Hobbies Page (Creative Commons)</div>
+            <a href="https://live.staticflickr.com/3919/14797066783_5d3cb41dc3_b.jpg" class="list-group-item list-group-item-action">Hobbies (1)</a>
+            <a href="https://live.staticflickr.com/5347/9703904811_082e58ec89_b.jpg"" class="list-group-item list-group-item-action">Hobbies (2)</a>
+            <a href="https://live.staticflickr.com/5508/9703869609_37a8cd7e76_b.jpg" class="list-group-item list-group-item-action">Hobbies (3)</a>
+            <a href="https://live.staticflickr.com/6149/6199438609_14a5bcf91f_b.jpg" class="list-group-item list-group-item-action">Music Taste (1)</a>
+            <a href="https://upload.wikimedia.org/wikipedia/commons/1/15/Where_stray_kids_stay.jpg" class="list-group-item list-group-item-action">Music Taste (2)</a>
+            <a href="https://live.staticflickr.com/4074/5447199165_875c48f367_b.jpg" class="list-group-item list-group-item-action">Music Taste (3)</a>
+            <a href="https://live.staticflickr.com/3761/9546866777_9719652eba_b.jpg" class="list-group-item list-group-item-action">Map of Travel (1)</a>
+            <a href="https://live.staticflickr.com/7449/9550288456_0d9d62eb5f_b.jpg" class="list-group-item list-group-item-action">Map of Travel (2)</a>
+            <a href="https://live.staticflickr.com/3176/2879148209_b10de83cc4_b.jpg" class="list-group-item list-group-item-action">Map of Travel (3)</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

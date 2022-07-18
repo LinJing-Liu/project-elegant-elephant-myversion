@@ -1,0 +1,65 @@
+.prof {
+    background-color: black;
+}
+.prof .header .title {
+    font-weight: 300;
+}
+.prof .hero {
+    padding: 200px 50px;
+    color: white;
+    text-align: center;
+}
+#prof-title {
+    font-size: 4em;
+    color: #BB86FC;
+    font-weight: 300;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.prof .section-divider {
+    border-color: #03ADC6;
+}
+.prof .jumbotron {
+    padding-left: 50px;
+    padding-top: 50px;
+    background-color: black;
+    color: white;
+    border: 3px solid #03ADC6;
+    border-radius: 15px;
+    margin-bottom: 0!important;
+}
+.prof .wrapper {
+    max-width: 90%;
+}
+.prof .jumbotron .info-subtitle {
+    color: #03DAC6;
+    padding-top: 50px;
+    font-size: 2em;
+    font-weight: 400!important;
+}
+.prof .jumbotron h5 {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    font-weight: 400;
+}
+.prof .links {
+    padding-top: 50px;
+}
+.links a {
+    margin-top: 20px;
+    color: white;
+    border-radius: 20px;
+    border: 2px solid #03DAC6;
+    background-color: black;
+    padding: 15px 25px;
+    margin-left: 20px;
+}
+.links a:hover {
+    background: #03DAC6;
+    border: 2px solid #03DAC6;
+}
+.info-container {
+    margin: 0px 100px;
+    padding-bottom: 100px;
+}

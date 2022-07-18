@@ -20,14 +20,18 @@ async function renderPosts() {
     let posts = await getPosts();
     let html = '';
     posts.timeline_posts.forEach(post => {
-        let htmlSegment = `<div class="singlePost">
-                            <img class="gravatar" src=${getGravatar(post.email)} />
-                            <h2>${post.name}</h2>
-                            <div class="email"><a href="email:${post.email}">${post.email}</a></div>
-                            <div class="timestamp">${post.created_at}</a><div>
-                            <div class="content">${post.content}</div>
-                            <br />
-                        </div>`;
+        let htmlSegment = `<div class="single-post row">
+                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                    <img class="gravatar" src=${getGravatar(post.email)} />
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-12">
+                                    <h2 class="name">${post.name}</h2>
+                                    <div class="email"><a href="email:${post.email}">${post.email}</a></div>
+                                    <div class="timestamp">${post.created_at}</a></div>
+                                    <div class="content">${post.content}</div>
+                                </div>
+                            </div>
+                            <hr class="post-divider" />`;
         html += htmlSegment;
     });
 
