@@ -47,8 +47,11 @@ function formSubmit() {
     request.open('POST', url, true);
     request.onload = function() {
         console.log(request.responseText);
-        if(request.status == 503) {
+        if (request.status == 503) {
             alert("You have attempted to submit too many timeline requests at a time. Please try again later.");
+        } else if (request.status == 400) {
+            alert("You have inputted an invalid response to the timeline form. Please try again using correct inputs.");
+            window.location.href = "/timeline";
         }
     };
  
