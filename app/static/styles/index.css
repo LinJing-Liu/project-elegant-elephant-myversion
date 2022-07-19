@@ -7,10 +7,6 @@
 .header .subtitle {
     margin-left: 0;
 }
-.fixed-top {
-    background-color: black!important;
-    border-bottom: 3px solid #BB86FC;
-}
 .about-cards, .identity-section, .connect-section {
     background-color: black;
     margin-top: 100px;

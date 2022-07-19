@@ -1,9 +1,6 @@
 html {
     scroll-behavior: smooth;
 }
-body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
 .body {
     background-color: black;
 }
@@ -16,6 +13,16 @@ body {
 }
 .navbar-light .navbar-toggler:focus{
     outline: 1px solid white;
+}
+.fixed-top {
+    background-color: black!important;
+    border-bottom: 3px solid #BB86FC;
+}
+.fixed-top .nav-item .nav-link{
+    color: #BB86FC;
+}
+.fixed-top .nav-item .nav-link:hover {
+    color: white;
 }
 .header {
     padding-top: 50px;
@@ -111,6 +118,9 @@ hr.divider {
     margin: 0;
     text-decoration: underline;
     color: white;
+}
+.footer a:hover {
+    color: #03ADC6;
 }
 .footer .bottom-info {
     text-align: center;

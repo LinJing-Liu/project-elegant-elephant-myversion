@@ -1,24 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<style>
-    .error-page {
-        background-color: black;
-        color: white;
-    }
-    .error-page .header {
-        padding-top: 200px;
-        max-width: 80%;
-        margin-left: 10%;
-    }
-    .error-page .title {
-        text-transform: uppercase;
-    }
-    .error-page hr {
-        margin: 0;
-        border-color: #03ADC6;
-    }
-</style>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    <style>
+        .error-page {
+            background-color: black;
+            color: white;
+        }
+        .error-page .header {
+            padding-top: 200px;
+            max-width: 80%;
+            margin-left: 10%;
+        }
+        .error-page .title {
+            text-transform: uppercase;
+        }
+        .error-page hr {
+            margin: 0;
+            border-color: #03ADC6;
+        }
+    </style>
+</head>
 <div class="error-page">
     <div class="header">
         <div class="description">
