@@ -1,6 +1,9 @@
 name: Deploy
 
 on:
+  push:
+      branches:
+        - workflow_test
   workflow_dispatch:
   workflow_run:
     workflows: ["Run Tests"]
@@ -31,11 +34,11 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           SSH_IP: ${{ secrets.SSH_IP }}
         
-      - name: Deploy site
-        run: ssh my-vm '~/redeploy-site.sh'
+      #- name: Deploy site
+      #  run: ssh my-vm '~/redeploy-site.sh'
       
       - name: Print container status
-        run: ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && docker compose ps'
+        run: ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && docker-compose ps'
       
       - name: Send Discord success message
         run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful ${{ secrets.SITE_URL }}"
