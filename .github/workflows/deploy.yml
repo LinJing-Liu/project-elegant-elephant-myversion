@@ -5,11 +5,6 @@ on:
       branches:
         - workflow_test
   workflow_dispatch:
-  workflow_run:
-    workflows: ["Run Tests"]
-    branches: [main]
-    types:
-      - completed
 
 jobs:
   deploy:
