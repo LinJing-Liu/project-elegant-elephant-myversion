@@ -10,7 +10,7 @@ jobs:
   deploy:
     name: "Deploy to DigitalOcean Droplet VPS"
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    #if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Configure SSH
         run: |
