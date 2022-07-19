@@ -1,9 +1,6 @@
 name: Deploy
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
   workflow_run:
     workflows: ["Run Tests"]
@@ -52,7 +49,7 @@ jobs:
 
   deploy_failure:
     runs-on: ubuntu-latest
-    if: always() && (needs.deploy.result == 'failure')
+    if: ${{ always() && needs.deploy.result == 'failure' }}
     steps:
       - name: Deploy process fails
         run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚨 Deployment Failed Due to Unknown Issues"
