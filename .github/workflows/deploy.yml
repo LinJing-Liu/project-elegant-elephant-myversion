@@ -49,6 +49,7 @@ jobs:
 
   deploy_failure:
     runs-on: ubuntu-latest
+    needs: [deploy]
     if: ${{ always() && needs.deploy.result == 'failure' }}
     steps:
       - name: Deploy process fails
