@@ -54,7 +54,7 @@ def professionalInfo():
 
 @app.route('/hobbies')
 def hobbies():
-    return render_template('hobbies.html', title="Hobbies", url=os.getenv("URL"))
+    return render_template('hobbies.html', title="Hobbies", url=os.getenv("URL"), hobby=hobby_info)
 
 @app.route('/timeline')
 def timeline():
