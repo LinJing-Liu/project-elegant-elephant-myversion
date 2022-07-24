@@ -8,6 +8,8 @@ from pymysql import *
 import re
 
 from .static.content.index_content import *
+from .static.content.prof_content import *
+from .static.content.hobby_content import *
 
 load_dotenv()
 app = Flask(__name__)
@@ -48,7 +50,7 @@ def index():
 
 @app.route('/professionalinfo')
 def professionalInfo():
-    return render_template('prof.html', title="Education/Experience", url=os.getenv("URL"))
+    return render_template('prof.html', title="Education/Experience", url=os.getenv("URL"), education=education_info, skills=skills_info, experience=experience_info, links=links_info)
 
 @app.route('/hobbies')
 def hobbies():
