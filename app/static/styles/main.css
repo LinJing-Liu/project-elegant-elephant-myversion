@@ -16,7 +16,7 @@ html {
 }
 .fixed-top {
     background-color: black!important;
-    border-bottom: 3px solid #BB86FC;
+    border-bottom: 3px solid #03ADC6;
 }
 .fixed-top .nav-item .nav-link{
     color: #BB86FC;

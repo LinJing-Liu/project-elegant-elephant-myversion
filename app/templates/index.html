@@ -9,7 +9,7 @@
   <header class="header">
     <div class="text">
       <h1 class="title text-uppercase">Welcome!</h1>
-      <h2 class="subtitle">My name is Lin and this is my portfolio site.</h2>
+      <h2 class="subtitle">My name is {{ header.name }} and this is my portfolio site.</h2>
       <a href="#about"><button class="btn btn-outline-secondary btn-lg">Learn More</button></a>
     </div>
   </header>
@@ -25,12 +25,14 @@
         </div>
         <div class="card col-lg-6 col-md-6 col-sm-12">
           <div class="card-body" id="bio">
-            <h2 class="card-title">Lin Jing Liu</h2>
-            <h3 class="card-subtitle mb-2">Class of 2025, Cornell University</h3>
+            <h2 class="card-title">
+              {{ content.name }}
+            </h2>
+            <h3 class="card-subtitle mb-2">
+              {{ content.about_subtitle }}
+            </h3>
             <h5 class="card-text">
-              I am a rising sophomore at Cornell University, majoring in Computer Science. I am
-              passionate about software engineering and hopes to learn more about the industry through both academic and
-              professional opportunities. Look around this website to know more about me and this team!
+              {{ content.about_info }}
             </h5>
           </div>
         </div>
@@ -41,33 +43,22 @@
     <h1 class="text-uppercase">Who am I?</h1>
     <div class="identity-body">
       <div class="row" id="first-row">
-        <div class="card col-lg-6 col-md-6 col-sm-12">
-          <div class="card-body">
-            <h3>Computer Science Major</h3>
+        {% for entry in identity.first_row %}
+          <div class="card col-lg-6 col-md-6 col-sm-12">
+            <div class="card-body">
+              <h3>{{ entry }}</h3>
+            </div>
           </div>
-        </div>
-        <div class="card col-lg-6 col-md-6 col-sm-12">
-          <div class="card-body">
-            <h3>Aspiring Software Engineer</h3>
-          </div>
-        </div>
+        {% endfor %}
       </div>
       <div class="row" id="second-row">
-        <div class="card col-lg-4 col-md-4 col-sm-12">
-          <div class="card-body">
-            <h3>Student</h3>
+        {% for entry in identity.second_row %}
+          <div class="card col-lg-4 col-md-4 col-sm-12">
+            <div class="card-body">
+              <h3>{{ entry }}</h3>
+            </div>
           </div>
-        </div>
-        <div class="card col-lg-4 col-md-4 col-sm-12">
-          <div class="card-body">
-            <h3>STEM Instructor</h3>
-          </div>
-        </div>
-        <div class="card col-lg-4 col-md-4 col-sm-12">
-          <div class="card-body">
-            <h3>Teammate</h3>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -76,27 +67,19 @@
     <h2 id="connect-title">Connect with Me!</h2>
     <div class="container">
       <div class="row">
-        <div class="card col-lg-4 col-md-4 col-sm-6">
-          <div class="card-body">
-            <a href="https://www.linkedin.com/in/lin-jing-l-50a6a0216/" target="_blank" rel="noopener noreferrer">
-              <img src="../static/img/linkedin.png">
-            </a>
+        {% for entry in connect %}
+          <div class="card col-lg-4 col-md-4 col-sm-6">
+            <div class="card-body">
+              <a href="{{ entry.link }}" target="_blank" rel="noopener noreferrer">
+                {% if entry.background_white %}
+                  <img class="background-white" src="{{ entry.img }}">
+                {% else %}
+                  <img src="{{ entry.img }}">
+                {% endif %}
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="card col-lg-4 col-md-4 col-sm-6">
-          <div class="card-body">
-            <a href="https://github.com/LinJing-Liu" target="_blank" rel="noopener noreferrer">
-              <img id="github" src="../static/img/github.png">
-            </a>
-          </div>
-        </div>
-        <div class="card col-lg-4 col-md-4 col-sm-6">
-          <div class="card-body">
-            <a href="https://www.instagram.com/linjl1993/" target="_blank" rel="noopener noreferrer">
-              <img src="../static/img/instagram.png">
-            </a>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>

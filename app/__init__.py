@@ -7,6 +7,8 @@ from playhouse.shortcuts import *
 from pymysql import *
 import re
 
+from .static.content.index_content import *
+
 load_dotenv()
 app = Flask(__name__)
 
@@ -42,14 +44,14 @@ def checkEmail(email):
 
 @app.route('/')
 def index():
-    return render_template('index.html', title="Home", url=os.getenv("URL"))
+    return render_template('index.html', title="Home", url=os.getenv("URL"), content=info, header=header, identity=identity_info, connect=connect_info)
 
 @app.route('/professionalinfo')
-def professionInfo():
+def professionalInfo():
     return render_template('prof.html', title="Education/Experience", url=os.getenv("URL"))
 
 @app.route('/hobbies')
-def portfolio():
+def hobbies():
     return render_template('hobbies.html', title="Hobbies", url=os.getenv("URL"))
 
 @app.route('/timeline')

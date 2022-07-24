@@ -1,3 +1,6 @@
+.fixed-top {
+    border-bottom-color: #BB86FC;
+}
 .header .title, .header .subtitle {
     text-align: left;
 }
@@ -80,7 +83,7 @@
     max-width: 60px;
     margin-left: 50%;
 }
-.connect-section #github {
+.connect-section .background-white {
     background-color: white;
     padding: 5px;
 }
