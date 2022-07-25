@@ -28,24 +28,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('index') }}">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('professionalInfo') }}">Education & Experience</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('hobbies') }}">Hobbies</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('timeline') }}">Timeline</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/#contact">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('about') }}">About This Site</a>
-          </li>
+            {% for entry in base.navigation %}
+              <li class="nav-item">
+                  <a class="nav-link" href="/{{ entry.url }}">{{ entry.display_text }}</a>
+              </li>
+            {% endfor %}
           </ul>
         </div>
     </nav>
@@ -58,21 +45,16 @@
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <h5 class="text-uppercase">Pages</h5>
                 <div>
-                  <p><a href="{{ url_for('index') }}">Home</a></p>
-                  <p><a href="{{ url_for('professionalInfo') }}">Education & Experience</a></p>
-                  <p><a href="{{ url_for('hobbies') }}">Hobbies</a></p>
-                  <p><a href="{{ url_for('timeline') }}">Timeline</a></p>
-                  <p><a href="/#contact">Contact</a></p>
-                  <p><a href="{{ url_for('about') }}">About This Site</a></p>
+                  {% for entry in base.navigation %}
+                    <p><a href="/{{ entry.url }}">{{ entry.display_text }}</a></p>
+                  {% endfor %}
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
               <h5 class="text-uppercase">@Copyright</h5>
-              <div id="copyright-description">
-                Template originally created by Luis Fernando Carnales, Lin Jing Liu & Marcela Ixchel Gomez Wuotto for MLH Fellowship in Summer 2022. Current version built by Lin Jing Liu @2022.
-              </div>
+              <div id="copyright-description">{{ base.copyright.text }}</div>
               <br />
-              <div>MLH Fellowship Summer 2022</div>
+              <div>{{ base.copyright.timestamp }}</div>
             </div>
         </div>
       </div>

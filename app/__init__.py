@@ -11,6 +11,7 @@ from .static.content.index_content import *
 from .static.content.prof_content import *
 from .static.content.hobby_content import *
 from .static.content.about_content import *
+from .static.content.base_content import *
 
 load_dotenv()
 app = Flask(__name__)
@@ -47,23 +48,23 @@ def checkEmail(email):
 
 @app.route('/')
 def index():
-    return render_template('index.html', title="Home", url=os.getenv("URL"), content=info, header=header, identity=identity_info, connect=connect_info)
+    return render_template('index.html', title="Home", url=os.getenv("URL"), base=base_info, content=info, header=header, identity=identity_info, connect=connect_info)
 
 @app.route('/professionalinfo')
 def professionalInfo():
-    return render_template('prof.html', title="Education/Experience", url=os.getenv("URL"), education=education_info, skills=skills_info, experience=experience_info, links=links_info)
+    return render_template('prof.html', title="Education/Experience", url=os.getenv("URL"), base=base_info, education=education_info, skills=skills_info, experience=experience_info, links=links_info)
 
 @app.route('/hobbies')
 def hobbies():
-    return render_template('hobbies.html', title="Hobbies", url=os.getenv("URL"), hobby=hobby_info)
+    return render_template('hobbies.html', title="Hobbies", url=os.getenv("URL"), base=base_info, hobby=hobby_info)
 
 @app.route('/timeline')
 def timeline():
-    return render_template('timeline.html', title="Timeline", url=os.getenv("URL"))
+    return render_template('timeline.html', title="Timeline", url=os.getenv("URL"), base=base_info, )
 
 @app.route('/about')
 def about():
-    return render_template('about.html', title="About This Site", url=os.getenv("URL"), state_links=statement_links, resource_links=resource_links)
+    return render_template('about.html', title="About This Site", url=os.getenv("URL"), base=base_info, state_links=statement_links, resource_links=resource_links)
 
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
