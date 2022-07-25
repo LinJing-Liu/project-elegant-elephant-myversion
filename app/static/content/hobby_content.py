@@ -5,6 +5,10 @@ class HobbyItem:
         self.text = text
         self.images = images
 
+hobby_title = 'Hobbies'
+music_title = 'Music Taste'
+travel_title = 'Map of Travel'
+
 hobby_text = 'My hobbies span a few areas, but overall, I am a quite indoor person. I like to read, watch movies and anime, listen to music (more on that in the music section), solve soduku puzzles and watch shows online (of course). I am also a foodie. I always have a genuine interest and curiosity for food that I have not tried before.'
 music_text = 'My music taste changes quite a bit over years as well. Generally, I listen to pop music in both Chinese and English, and whatever kind of music I find online. In addition, I also really like kpop and track music from movies, shows and anime.'
 travel_text = 'One memorable trip I had a few years ago is to the Niagara Falls. I will recommend it to anyone who is not boat-sick. The view is quite beautiful, as shown in the image below (from Creative Commons sadly).'
@@ -26,7 +30,7 @@ travel_links = [
 ]
 
 hobby_info = [
-    HobbyItem('Hobbies', 'food-carousel', hobby_text, hobby_links),
-    HobbyItem('Music Taste', 'music-carousel', music_text, music_links),
-    HobbyItem('Map of Travel', 'travel-carousel', travel_text, travel_links)
+    HobbyItem(hobby_title, 'food-carousel', hobby_text, hobby_links),
+    HobbyItem(music_title, 'music-carousel', music_text, music_links),
+    HobbyItem(travel_title, 'travel-carousel', travel_text, travel_links)
 ]

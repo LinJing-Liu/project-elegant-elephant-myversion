@@ -10,6 +10,7 @@ import re
 from .static.content.index_content import *
 from .static.content.prof_content import *
 from .static.content.hobby_content import *
+from .static.content.about_content import *
 
 load_dotenv()
 app = Flask(__name__)
@@ -62,7 +63,7 @@ def timeline():
 
 @app.route('/about')
 def about():
-    return render_template('about.html', title="About This Site", url=os.getenv("URL"))
+    return render_template('about.html', title="About This Site", url=os.getenv("URL"), state_links=statement_links, resource_links=resource_links)
 
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
