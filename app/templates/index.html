@@ -4,6 +4,19 @@
 <head>
   <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+  <script>
+    async function getPosts() {
+      let url = '/api/timeline_post';
+      try {
+          let res = await fetch(url);
+          return await res.json();
+      } catch (error) {
+          console.log(error);
+      }
+    }
+
+    console.log(getPosts());
+  </script>
 </head>
 <div class="body">
   <header class="header">
